@@ -4,7 +4,7 @@ name: integration
  
 steps:
   - name: code-analysis
-    image: boulundeasv/dotnet-sdk-with-java
+    image: hoeeg79/dotnet-sdk-with-java
     environment:
       SONARSECRET:
         from_secret: SonarQubeSecret
@@ -38,7 +38,7 @@ steps:
         from_secret: DockerPassword
       context: src
       dockerfile: src/WeatherAPI/Dockerfile
-      repo: boulundeasv/cd-weather-api
+      repo: hoeeg79/cd-weather-api
       tags: 
         - staging
 
